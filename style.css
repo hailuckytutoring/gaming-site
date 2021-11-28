@@ -25,10 +25,10 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
-body.boltbreak {
+/* body.boltbreak {
   color: var(--main-color);
   background-color: rgb(245, 245, 245);
-}
+} */
 
 h2 {
   margin-top: 9rem;
@@ -48,7 +48,7 @@ p {
   justify-content: space-between;
 }
 .header-container img {
-  height: 140px;
+  height: 120px;
   padding-left: 50px;
 }
 .header-container .links {
@@ -56,7 +56,7 @@ p {
   font-size: 24px;
 }
 .header-container .links a {
-  line-height: 140px;
+  line-height: 120px;
   margin: 0 20px;
 }
 .links a.selected {
@@ -70,7 +70,8 @@ p {
   position: absolute;
 }
 .background-image {
-  transform: translateY(-140px);
+  position: absolute;
+  margin-top: -15rem;
   z-index: -10;
   width: 100vw;
 }
@@ -78,7 +79,7 @@ p {
   width: 100%;
 }
 .separator {
-  margin-top: 800px;
+  margin-top: 834px;
 }
 
 /* carosoul */
@@ -103,6 +104,26 @@ p {
   text-decoration: underline;
 }
 
+/* wishlist */
+.wishlist {
+  margin-top: 5rem;
+  display: flex;
+  border-radius: 25px;
+  border: 2px solid rgb(73, 73, 61);
+  transition: all ease 0.1s;
+}
+.wishlist img {
+  height: 60px;
+  transform: translateX(-10px);
+}
+.wishlist h3 {
+  line-height: 60px;
+  transform: translateX(-20px);
+}
+.wishlist:hover {
+  transform: scale(1.03);
+}
+
 /* Footer */
 footer {
   margin-top: 8rem;
@@ -110,20 +131,11 @@ footer {
   padding: 28px;
   text-align: center;
   width: 100%;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
 }
 footer a {
-  color: rgb(29, 29, 29);
-}
-footer a:hover {
-  color: rgb(5, 5, 5);
-}
-.boltbreak footer {
-  background-color: var(--main-dark-color);
-}
-.boltbreak footer a {
   color: rgb(245, 245, 245);
 }
-.boltbreak footer a:hover {
-  color: rgb(223, 223, 223);
+footer a:hover {
+  color: rgb(209, 209, 209);
 }
