@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 :root {
   --main-color: rgb(26, 26, 27);
   --main-dark-color: rgb(29, 28, 31);
@@ -5,7 +7,7 @@
 
 /* General */
 body {
-  font-family: 'proxima-nova', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "proxima-nova", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--main-color);
   color: rgb(247, 247, 247);
   overflow-x: hidden;
@@ -40,6 +42,7 @@ p {
 }
 
 /* Header */
+
 .header-container {
   width: 100%;
   background-color: rgba(35, 36, 36, 0.95);
@@ -62,16 +65,21 @@ p {
 .links a.selected {
   color: rgb(228, 227, 227);
 }
+.hamburger-navbar {
+  display: none;
+}
 
 /* video */
 .background-video {
   margin-top: -11rem;
   z-index: -10;
   position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 .background-image {
   position: absolute;
-  margin-top: -15rem;
+  margin-top: 120px;
   z-index: -10;
   width: 100vw;
 }
@@ -80,6 +88,29 @@ p {
 }
 .separator {
   margin-top: 834px;
+}
+.separator.mallOfMayhem {
+  margin-top: 1104px;
+}
+.overlay {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 4px;
+  position: absolute;
+  z-index: -1;
+  font-size: 2.2rem;
+  color: rgb(231, 231, 231);
+  transform: translateY(625px);
+  padding-left: 80px;
+}
+.overlay.mallOfMayhem {
+  transform: translateY(825px);
+}
+.overlay-layer {
+  position: absolute;
+  z-index: -9;
+  width: 100vw;
+  height: 904px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* carosoul */
@@ -111,8 +142,10 @@ p {
   border-radius: 25px;
   border: 2px solid rgb(73, 73, 61);
   transition: all ease 0.1s;
+  text-decoration: none !important;
 }
 .wishlist img {
+  width: auto;
   height: 60px;
   transform: translateX(-10px);
 }
@@ -138,4 +171,30 @@ footer a {
 }
 footer a:hover {
   color: rgb(209, 209, 209);
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .header-container img {
+    height: 100px;
+    padding-left: 0px;
+  }
+  i,
+  a {
+    color: rgb(247, 247, 247) !important;
+  }
+  button:focus {
+    outline: none;
+  }
+  li {
+    margin: 0.14rem;
+    text-align: center;
+  }
+
+  .hamburger-navbar {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
 }
